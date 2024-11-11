@@ -1,8 +1,12 @@
-# React + Vite
+### Tip: ResponsiveContainer Usage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The `ResponsiveContainer` component requires a parent element with a defined width and height to render properly. Make sure to set the width and height explicitly or ensure that the parent container has these properties.
 
-Currently, two official plugins are available:
+Example:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```jsx
+<ResponsiveContainer width="100%" height={400}>
+  <LineChart data={data}>
+    {/* Your chart components here */}
+  </LineChart>
+</ResponsiveContainer>
